@@ -1,4 +1,4 @@
-# session-store-5faa3a
+# session-store-e272f5
 
 A Node.js session store utility.
 

